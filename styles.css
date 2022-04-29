@@ -25,12 +25,6 @@ header {
 }
 
 
-/*
-::before is a content selector:
-https://developer.mozilla.org/en-US/docs/Web/CSS/::before
-This is similar to creating a <div> overlay, like the example from the slides.
-See that the header is set to "position: relative;".
-*/
 header::before {
   content: '';
   position: absolute;
@@ -41,19 +35,6 @@ header::before {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-header nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    font-size: 14px;
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-}
 
 #links a {
   margin: 15px;
@@ -118,27 +99,14 @@ h1 a.button:hover {
 
 
 section {
-    margin: 30px 50px;
+    margin: 50px 125px;
     text-align: center;
-} /* section width = body width - 2*margin left */ 
+} 
 
-#main p {
-    margin-left: auto;
-    margin-right:  auto;
-    margin-bottom: 125px;
-    width: 60%;  /* parent>>  <div main> >> <section>   */
-}
 
 p {
-  line-height: 36px;
+  line-height: 25px;
 }
-
-#main h1 {
-    font-size: 28px;
-    font-weight: normal;
-    color: rgba(26,26,26,.9);
-}
-
 
 
 #details {
@@ -149,11 +117,11 @@ p {
 .column {
     flex:45%;
     max-width: 45%;
-    padding: 0 20px;
+    padding: 0 35px;
 }
 
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the one columns stack on top of each other instead of next to each other */
 @media (max-width: 800px) {
     .column {
       flex: 100%;
@@ -162,8 +130,9 @@ p {
   };
 
 
-.projet_container {
-    margin-bottom: 5px;
+.item_container {
+    margin-bottom: 50px 0px;
+    box-shadow: 5px 0px 6px #dbdbdb, -5px 0px 6px #dbdbdb;
 } 
 
 
