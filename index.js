@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-var projectlist = [
+const PROJECT_LIST = [
     {
         name:"Teams UI clone",
         image_src: "https://raw.githubusercontent.com/learningreac/teams_clone/master/public/imgs/UI-with-routing.png",
@@ -45,5 +38,41 @@ var projectlist = [
         name:"Phonebook deployed",
         image_src: "https://raw.githubusercontent.com/learningreac/fullstack_open/master/part2/phonebook_frontend/public/home.png",
         github_address:"https://gentle-tundra-28997.herokuapp.com/"
-    },
+    }
 ]
+
+
+
+
+function createImage(src) {
+    const image = document.createElement('img');
+    image.src = src;
+    return image;
+};
+
+function onThumbnailClick(event){
+   console.log(event.target)
+}
+
+
+
+const albumView = document.querySelector('#details');
+console.log(albumView,'av')
+for (const PROJECT of PROJECT_LIST) {
+    console.log('start script')
+    const project_container = document.createElement('div')
+    
+    const photoSrc = PROJECT.image_src;
+    const image = createImage(photoSrc);
+    image.addEventListener('click', onThumbnailClick);
+
+    pro_container.appendChild(image);
+    
+    albumView.appendChild(project_container);
+};
+
+
+
+
+
+

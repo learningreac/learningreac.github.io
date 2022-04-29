@@ -1,0 +1,188 @@
+body {
+    color: rgba(26, 26, 26, .7); 
+    margin: 0;
+    font-family:'Lora', serif;
+
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+header {
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color:white;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/*
+::before is a content selector:
+https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+This is similar to creating a <div> overlay, like the example from the slides.
+See that the header is set to "position: relative;".
+*/
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 14px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+#links a {
+  margin: 15px;
+} 
+
+a {
+    cursor: pointer;
+    color: inherit; 
+    text-decoration: none;
+}
+
+
+a.button {
+    border: 2px solid white;
+    border-radius: 100px;
+    padding: 10px 15px;
+}
+
+a.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.button,
+header h1 strong,
+#details h1, #links {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: normal;
+    z-index: 1; /* so it won't be covered by the header cover*/
+}
+
+header h1 em {
+   font-size: 20px;
+   letter-spacing: 1px;
+}
+
+header h1 strong {
+    font-size: 68px;
+    letter-spacing: 4px;
+}
+
+header h1 a {
+    font-size: 15px;
+}
+
+h1 a.button {
+    border: 0;
+    background-color: rgb(54, 179, 168);
+}
+
+h1 a.button:hover {
+    background-color: rgba(54, 179, 168, 0.75);
+    color: inherit;
+}
+
+
+section {
+    margin: 30px 50px;
+    text-align: center;
+} /* section width = body width - 2*margin left */ 
+
+#main p {
+    margin-left: auto;
+    margin-right:  auto;
+    margin-bottom: 125px;
+    width: 60%;  /* parent>>  <div main> >> <section>   */
+}
+
+p {
+  line-height: 36px;
+}
+
+#main h1 {
+    font-size: 28px;
+    font-weight: normal;
+    color: rgba(26,26,26,.9);
+}
+
+
+
+#details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex:45%;
+    max-width: 45%;
+    padding: 0 20px;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  };
+
+
+.projet_container {
+    margin-bottom: 5px;
+} 
+
+
+#details img {
+  width: 100%;  /* width relative its parent element which is <div> here */
+  height: 70%;
+}
+
+#details img:hover {
+    opacity: 0.8;
+}
+
+#details h1 {
+    color: rgba(61, 153, 145, 1.0);
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: black;
+    height: 100px;
+}
