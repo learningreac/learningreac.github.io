@@ -99,7 +99,7 @@ h1 a.button:hover {
 
 
 section {
-    margin: 50px 125px;
+    margin: 5% 5%;
     text-align: center;
 } 
 
@@ -123,7 +123,7 @@ p {
 
 
 /* Responsive layout - makes the one columns stack on top of each other instead of next to each other */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .column {
       flex: 100%;
       max-width: 100%;
