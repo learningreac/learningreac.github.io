@@ -10,6 +10,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -62,9 +64,27 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    img{
-      padding:0.25rem;
+    img {
+      padding: 0.25rem;
     }
+
+    .col:hover{
+      opacity: 0.7;
+    }
+
+
+    .mainTitle {
+      padding-inline-start: 2%;
+    }
+
+    .card-title {
+      position: absolute;
+      text-align: center;
+      bottom: 60%;
+      width: 100%;
+      font-size: 2.5rem;
+    }
+
   </style>
 
 
@@ -97,14 +117,14 @@
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
-        <a href="#" class="navbar-brand d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-            viewBox="0 0 24 24">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-            <circle cx="12" cy="13" r="4" />
+        <a href="https://github.com/learningreac" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-code">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
-          <strong>My Project</strong>
+          <strong class="mainTitle">My Project</strong>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
           aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +142,7 @@
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
             etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="https://github.com/learningreac" class="btn btn-primary my-2">Github page</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>
           </p>
         </div>
@@ -138,13 +158,13 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/movie_app/master/public/imgs/home_page.png"
                 alt="movie" width=100% />
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c" />
+              <div class="card-title text-primary"> Movie </div>
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/learningreac/movie_app"
+                    role="button">View</a>
                 </div>
               </div>
             </div>
@@ -155,14 +175,14 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/ipc2581_react2/master/imgs/rectangles.png"
                 alt="drawpad" />
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c" />
+              <div class="card-title text-primary"> Draw Pad </div>
 
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary"
+                    href="https://github.com/learningreac/ipc2581_react2/tree/master/src/drawpad" role="button">View</a>
                 </div>
               </div>
             </div>
@@ -173,12 +193,14 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/chat/master/public/imgs/Step6_Chat_page.png"
                 alt="chat" width=100% />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> Chat App </div>
+
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/learningreac/chat"
+                    role="button">View</a>
                 </div>
               </div>
             </div>
@@ -189,13 +211,14 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/teams_clone/master/public/imgs/UI-with-routing.png"
                 alt="teams" />
-              <rect width="100%" height="100%" fill="#55595c" />
-              </svg>
+                <div class="card-title text-primary"> Teams </div>
+
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/learningreac/teams_clone"
+                    role="button">View</a>
                 </div>
               </div>
             </div>
@@ -206,14 +229,17 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/fullstack_open/master/part2/phonebook_frontend/public/home.png"
                 alt="phonebook" width=100% />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> Phonebook </div>
+
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
+                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/learningreac/movie_app"
+                      role="button">On Github</a>
+                    <a class="btn btn-sm btn-outline-primary" href="https://gentle-tundra-28997.herokuapp.com/"
+                      role="button">On Heroku</a>
                   </div>
                 </div>
               </div>
@@ -225,12 +251,15 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/ipc2581_react2/master/imgs/delaunator.png"
                 alt="delaunator" />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> Delaunator </div>
+
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary"
+                    href="https://github.com/learningreac/ipc2581_react2/tree/master/src/delauntor"
+                    role="button">View</a>
                 </div>
               </div>
             </div>
@@ -241,46 +270,51 @@
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/fullstack_open/master/part6/redux-anecdotes/public/home.png"
                 alt="anecdotes" width=100% />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> Anecdotes </div>
 
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-center align-items-center">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+                  <a class="btn btn-sm btn-outline-primary"
+                    href="https://github.com/learningreac/fullstack_open/tree/master/part6" role="button">View</a>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col">
             <div class="card shadow-sm">
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/ipc2581_react2/master/imgs/ipc2581Sample.png"
                 alt="xml_parser" />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> XML_Parser </div>
 
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                  </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <a class="btn btn-sm btn-outline-primary"
+                    href="ttps://github.com/learningreac/ipc2581_react2/tree/master/src" role="button">View</a>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col">
             <div class="card shadow-sm">
               <img class="bd-placeholder-img card-img-top" width="100%" height="225"
                 src="https://raw.githubusercontent.com/learningreac/Img2pdf/master/img/the_pdf_page.png" alt="img2pdf"
                 width=100% />
-              <rect width="100%" height="100%" fill="#55595c" />
+                <div class="card-title text-primary"> Img to Pdf </div>
 
               <div class="card-body">
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
                   content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                  </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/learningreac/Img2pdf"
+                    role="button">View</a>
+                </div>
               </div>
             </div>
           </div>
